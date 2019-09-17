@@ -3,4 +3,8 @@
     <string name="map">map</string>
     <string name="fav">fav</string>
     <string name="recents">recents</string>
+    <string name="home">home</string>
+    <string name="setting">setting</string>
+    <string name="list">List</string>
+    <string name="HOME">HOME</string>
 </resources>
