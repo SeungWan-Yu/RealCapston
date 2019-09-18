@@ -20,24 +20,51 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="비밀번호"
-        android:inputType="textPassword"
+        android:inputType="text"
         app:layout_constraintTop_toBottomOf="@+id/et_id"
         tools:layout_editor_absoluteX="-16dp" />
 
-    <Button
-        android:id="@+id/bt_login"
+    <EditText
+        android:id="@+id/et_pwcheck"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="로그인"
+        android:layout_height="50dp"
+        android:hint="비밀번호확인"
+        android:inputType="text"
         app:layout_constraintTop_toBottomOf="@+id/et_pw"
-        tools:layout_editor_absoluteX="164dp" />
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="이메일"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/et_pwcheck"
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="이름"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        tools:layout_editor_absoluteX="-16dp" />
 
     <Button
         android:id="@+id/bt_singup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="새로운 사용자이신가요?  계정 만들기"
-        app:layout_constraintTop_toBottomOf="@+id/bt_login"
+        android:text="회원가입"
+        app:layout_constraintTop_toBottomOf="@+id/et_name"
+        tools:layout_editor_absoluteX="164dp" />
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이미 계정을 가지고 계신가요? 로그인"
+        app:layout_constraintTop_toBottomOf="@+id/bt_singup"
         tools:layout_editor_absoluteX="-68dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

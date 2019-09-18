@@ -14,10 +14,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RemoteViews
+import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_setting.*
+import java.time.LocalTime
+import java.time.format.DateTimeFormatter
 
+@Suppress("DEPRECATION")
 class SettingFragment : Fragment() {
 
     lateinit var notificationManager: NotificationManager
@@ -33,6 +37,7 @@ class SettingFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_setting, container, false)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     @SuppressLint("WrongConstant")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
@@ -44,10 +49,9 @@ class SettingFragment : Fragment() {
             val pendingIntent = PendingIntent.getActivity(activity,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)
 
             val contentView = RemoteViews(activity!!.packageName,R.layout.notification_layout)
-//            contentView.setTextViewText(R.id.tv_time, time)
-            contentView.setTextViewText(R.id.tv_name,"RealCapston")
+            contentView.setTextViewText(R.id.tv_name,"RealCapston"+ CustomTime())
             contentView.setTextViewText(R.id.tv_title,"경고!")
-            contentView.setTextViewText(R.id.tv_content,"시스템에 문제가 있습니다.")
+            contentView.setTextViewText(R.id.tv_content,"모니터링중 문제가 발생하였습니다.")
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 notificationChannel = NotificationChannel(channelId,description,NotificationManager.IMPORTANCE_DEFAULT)
@@ -74,6 +78,15 @@ class SettingFragment : Fragment() {
             }
             notificationManager.notify(0,builder.build())
         }
+
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun CustomTime(): String? {
+        val current = LocalTime.now()
+        val formatter = DateTimeFormatter.ofPattern("  a h:mm")
+        val formatted = current.format(formatter)
+        return formatted
 
     }
 }
