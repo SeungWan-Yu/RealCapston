@@ -54,7 +54,7 @@ class SettingFragment : Fragment() {
             contentView.setTextViewText(R.id.tv_content,"모니터링중 문제가 발생하였습니다.")
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                notificationChannel = NotificationChannel(channelId,description,NotificationManager.IMPORTANCE_DEFAULT)
+                notificationChannel = NotificationChannel(channelId,description,NotificationManager.IMPORTANCE_HIGH)
                 notificationChannel.enableLights(true)
                 notificationChannel.lightColor= Color.GREEN
                 notificationChannel.enableVibration(false)
@@ -65,7 +65,7 @@ class SettingFragment : Fragment() {
                     .setSmallIcon(R.mipmap.ic_launcher_round)
                     .setContentIntent(pendingIntent)
                     .setAutoCancel(true)
-                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                    .setPriority(NotificationCompat.PRIORITY_HIGH)
             }
             else
             {
@@ -74,7 +74,7 @@ class SettingFragment : Fragment() {
                     .setSmallIcon(R.mipmap.ic_launcher_round)
                     .setContentIntent(pendingIntent)
                     .setAutoCancel(true)
-                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                    .setPriority(NotificationCompat.PRIORITY_HIGH)
             }
             notificationManager.notify(0,builder.build())
         }

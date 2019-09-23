@@ -13,4 +13,5 @@ class MySharedPreferences (context: Context){
         get() = prefs.getString(PREF_KEY_MY_ID, "")
         set(value) = prefs.edit().putString(PREF_KEY_MY_ID, value).apply()
 
+
 }
