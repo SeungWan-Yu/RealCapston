@@ -63,6 +63,7 @@
             <Button
                 android:id="@+id/bt_singup"
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
                 android:text="새로운 사용자이신가요?  계정 만들기" />
         </LinearLayout>
