@@ -2,7 +2,7 @@ package com.example.realcapston
 
 import com.google.gson.annotations.SerializedName
 
-class UserModel(
+data class UserModel(
 
     @SerializedName("id") val id: String,
 
