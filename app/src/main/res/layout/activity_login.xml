@@ -7,66 +7,51 @@
     android:padding="20dp"
     tools:context=".LoginActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="20dp">
 
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:text="로그인"
+            android:textSize="30dp" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="로그인"
-                android:textSize="30dp" />
-
-            <EditText
-                android:id="@+id/et_id"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="80dp"
-                android:layout_weight="1"
-                android:drawableStart="@drawable/ic_person_black_24dp"
-                android:hint="계정 아이디"
-                android:inputType="text" />
-
-            <EditText
-                android:id="@+id/et_pw"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:drawableStart="@drawable/ic_lock_black_24dp"
-                android:hint="비밀번호"
-                android:inputType="textPassword" />
-
-            <Button
-                android:id="@+id/bt_login"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="로그인" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/et_id"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:drawableStart="@drawable/ic_person_black_24dp"
+            android:hint="계정 아이디"
+            android:inputType="text" />
 
-            <Button
-                android:id="@+id/bt_singup"
-                android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/et_pw"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/ic_lock_black_24dp"
+            android:hint="비밀번호"
+            android:inputType="textPassword" />
 
-                android:layout_height="wrap_content"
-                android:text="새로운 사용자이신가요?  계정 만들기" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="로그인" />
+
+        <Button
+            android:id="@+id/bt_singup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="새로운 사용자이신가요?  계정 만들기" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
