@@ -2,11 +2,11 @@ package com.example.realcapston
 
 import com.google.gson.annotations.SerializedName
 
-data class UserModel(
+data class ComModel(
 
     @SerializedName("id") val id: String,
 
-    @SerializedName("number") val name: String,
+    @SerializedName("number") val number: String,
 
     @SerializedName("os") val os: String,
 
@@ -37,4 +37,5 @@ data class UserModel(
     @SerializedName("network-tx-packet") val networktxpacket: String,
 
     @SerializedName("timestamp") val timestamp: String
+
 )
