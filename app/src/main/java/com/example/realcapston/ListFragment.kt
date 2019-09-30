@@ -45,6 +45,7 @@ class ListFragment : Fragment() {
             override fun onResponse(call: Call<List<ComModel>>, response: Response<List<ComModel>>) {
                 val body = response.body()
                 setAdapter(body as ArrayList<ComModel>)
+//                asd
             }
 
             override fun onFailure(call: Call<List<ComModel>>, t: Throwable) {
