@@ -7,5 +7,5 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="여기페이지에 만들어 준철아" />
+        android:text="여기페이지에 만들어 준철아ㅇㅁㄴㅇㅁㄴ" />
 </LinearLayout>
