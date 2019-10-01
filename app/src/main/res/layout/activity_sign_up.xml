@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradientbackground"
     android:padding="20dp"
     tools:context=".LoginActivity">
 
@@ -20,6 +21,7 @@
             android:id="@+id/et_id"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:drawableStart="@drawable/ic_person_black_24dp"
             android:hint="계정 아이디"
             android:inputType="text" />
 
@@ -27,6 +29,7 @@
             android:id="@+id/et_pw"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:drawableStart="@drawable/ic_lock_black_24dp"
             android:hint="비밀번호"
             android:inputType="text" />
 
@@ -34,6 +37,7 @@
             android:id="@+id/et_pwcheck"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:drawableStart="@drawable/ic_lock_black_24dp"
             android:hint="비밀번호확인"
             android:inputType="text" />
 
@@ -41,6 +45,7 @@
             android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:drawableStart="@drawable/ic_email_black_24dp"
             android:hint="이메일"
             android:inputType="text" />
 
@@ -55,12 +60,18 @@
             android:id="@+id/bt_singup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff"
             android:text="회원가입" />
 
         <Button
             android:id="@+id/bt_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/button2"
+            android:layout_marginTop="10dp"
+            android:textColor="#0080ff"
             android:text="이미 계정을 가지고 계신가요? 로그인" />
     </LinearLayout>
 
