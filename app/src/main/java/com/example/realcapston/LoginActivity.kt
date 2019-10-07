@@ -1,6 +1,7 @@
 package com.example.realcapston
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.startActivity
@@ -45,13 +46,13 @@ class LoginActivity : AppCompatActivity() {
                             val body = response.body()
                             if (body?.userexists.toString()=="true") {
                                 val body = response.body().toString()
-                                body?.let {
+                                body.let {
                                     App.prefs.myId = inputLogin
 //            'set 실행'
                                     startActivity<MainActivity>()
                                     finish()
                                 }
-                            } else if (inputLogin.isNullOrEmpty() && inputPassword.isNullOrEmpty()) {
+                            } else if (inputLogin.isEmpty() && inputPassword.isEmpty()) {
                                 toast("ID와 비밀번호를 입력해주세요.")
                             } else {
                                 toast("존재하지 않는 ID이거나, 비밀번호가 틀렸습니다.")
@@ -60,7 +61,8 @@ class LoginActivity : AppCompatActivity() {
                         }
 
                         override fun onFailure(call: Call<LoginModel>, t: Throwable) {
-                            toast("통신에 실패하였습니다.")
+//                            toast("통신에 실패하였습니다.")
+                            Log.d("통신에 실패하였습니다.",t.message)
                         }
                     })
 

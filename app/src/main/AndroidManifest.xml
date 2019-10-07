@@ -3,21 +3,22 @@
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.example.realcapston">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <dist:module dist:instant="true" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".App"
         android:theme="@style/AppTheme">
+        <activity android:name=".detailActivity"></activity>
         <activity
             android:name=".SIgnUpActivity"
-            android:label="OVERLOG"></activity>
+            android:label="OVERLOG" />
         <activity
             android:name=".LoginActivity"
             android:label="OVERLOG">
@@ -29,8 +30,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="OVERLOG">
-        </activity>
+            android:label="OVERLOG"></activity>
     </application>
 
 </manifest>

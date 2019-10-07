@@ -3,7 +3,7 @@ package com.example.realcapston
 import android.content.Context
 import android.content.SharedPreferences
 
-class MySharedPreferences (context: Context){
+class MySharedPreferences(context: Context) {
 
     val PREFS_FILENAME = "prefs"
     val PREF_KEY_MY_ID = "myEditText"

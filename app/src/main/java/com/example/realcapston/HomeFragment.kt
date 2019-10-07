@@ -21,7 +21,7 @@ class HomeFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        h_tv_id.setText(App.prefs.myId+"님 로그인!")
+        h_tv_id.text = App.prefs.myId+"님 로그인!"
 
     }
 }
