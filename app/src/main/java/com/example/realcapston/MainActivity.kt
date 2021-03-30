@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if (App.prefs.myId == "") {
-            finish()
-        } else {
+//        if (App.prefs.myId == "") {
+//            finish()
+//        } else {
 
             navController = Navigation.findNavController(this, R.id.my_nav_host_fragment)
 
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
 //        NavigationUI.setupActionBarWithNavController(this,navController)
 
-        }
+//        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

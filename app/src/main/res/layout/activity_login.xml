@@ -30,35 +30,28 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
+            android:background="@null"
             android:drawableStart="@drawable/ic_person_black_24dp"
-            android:hint="아이디"
+            android:hint="핸드폰 번호 입력"
             android:inputType="text" />
 
         <EditText
             android:id="@+id/et_pw"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@null"
             android:drawableStart="@drawable/ic_lock_black_24dp"
-            android:hint="비밀번호"
+            android:hint="비밀번호 입력"
             android:inputType="textPassword" />
 
         <Button
             android:id="@+id/bt_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button"
+            android:background="#FF9900"
             android:layout_marginTop="10dp"
             android:textColor="#ffffff"
             android:text="로그인" />
-
-        <Button
-            android:id="@+id/bt_singup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button2"
-            android:layout_marginTop="10dp"
-            android:textColor="#0080ff"
-            android:text="새로운 사용자이신가요?  계정 만들기" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

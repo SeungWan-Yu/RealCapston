@@ -15,22 +15,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".detailActivity"></activity>
         <activity
-            android:name=".SIgnUpActivity"
-            android:label="OVERLOG" />
-        <activity
-            android:name=".LoginActivity"
-            android:label="OVERLOG">
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:label="OVERLOG"></activity>
+            android:name=".DetailActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".SIgnUpActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

@@ -1,10 +1,12 @@
 <resources>
-    <string name="app_name">RealCapston</string>
+    <string name="app_name">SmartHive</string>
     <string name="map">map</string>
     <string name="fav">fav</string>
     <string name="recents">recents</string>
     <string name="home">home</string>
-    <string name="setting">setting</string>
-    <string name="list">List</string>
+    <string name="setting">SETTING</string>
+    <string name="list">LIST</string>
     <string name="HOME">HOME</string>
+    <string name="title">HOME</string>
+    <string name="detail">벌통 목록</string>
 </resources>

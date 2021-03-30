@@ -3,9 +3,8 @@ package com.example.realcapston
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_list.*
@@ -34,6 +33,12 @@ class ListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        this.button_test.setOnClickListener {
+            activity?.let {
+                val intent = Intent(context, DetailActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
         val retrofit = Retrofit.Builder()
             .baseUrl(url)
@@ -57,12 +62,17 @@ class ListFragment : Fragment() {
                 Log.d("통신에 실패하였습니다.", t.message)
             }
         })
+        setHasOptionsMenu(true)
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.list)
+    }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.listmenu, menu)
     }
 
     private fun comItemClicked(com: ComModel?) {
 //        Toast.makeText(context, "Clicked: ${com?.number}", Toast.LENGTH_SHORT).show()
-        val nIntent = Intent(activity, detailActivity::class.java)
+        val nIntent = Intent(activity, DetailActivity::class.java)
         nIntent.putExtra("comId",com?.id)
         startActivity(nIntent)
     }

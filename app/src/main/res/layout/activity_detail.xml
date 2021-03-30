@@ -4,6 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".detailActivity">
+    tools:context=".DetailActivity">
 
+    <Button
+        android:id="@+id/button_noty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="noty"
+        tools:ignore="MissingConstraints" />
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/linechart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
